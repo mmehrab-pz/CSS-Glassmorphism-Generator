@@ -32,8 +32,8 @@ body {
                 position: absolute;
                 top: 0;
                 left: 0;
-                backdrop-filter: blur(13.6px);
-                background-image: linear-gradient(45deg, rgba(32, 152, 255, 0.3), rgba(32, 152, 255, 0.3));
+                backdrop-filter: blur(50px);
+                background-color: rgba(173, 173, 173, 0.35);
                 z-index: 10;
                 display: flex;
                 justify-content: center;
@@ -44,8 +44,8 @@ body {
                 >div {
                     width: 400px;
                     height: 300px;
-                    backdrop-filter: blur(20px);
-                    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+                    backdrop-filter: blur(50px);
+                    background-color: rgba(173, 173, 173, 0.35);
                     border-radius: 20px;
                     display: flex;
                     justify-content: center;
