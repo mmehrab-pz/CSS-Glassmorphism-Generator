@@ -5,9 +5,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: url(../img/takhte-jamshid.jpg);
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(33deg, rgb(89, 74, 10) 0%, rgb(89, 74, 10) 4.762%, rgb(110, 79, 11) 4.762%, rgb(110, 79, 11) 9.524%, rgb(131, 84, 12) 9.524%, rgb(131, 84, 12) 14.286%, rgb(152, 90, 13) 14.286%, rgb(152, 90, 13) 19.048%, rgb(173, 96, 14) 19.048%, rgb(173, 96, 14) 23.81%, rgb(194, 104, 16) 23.81%, rgb(194, 104, 16) 28.571%, rgb(214, 112, 17) 28.571%, rgb(214, 112, 17) 33.333%, rgb(234, 121, 19) 33.333%, rgb(234, 121, 19) 38.095%, rgb(253, 130, 21) 38.095%, rgb(253, 130, 21) 42.857%, rgb(255, 140, 23) 42.857%, rgb(255, 140, 23) 47.619%, rgb(255, 150, 24) 47.619%, rgb(255, 150, 24) 52.381%, rgb(255, 161, 26) 52.381%, rgb(255, 161, 26) 57.143%, rgb(255, 173, 28) 57.143%, rgb(255, 173, 28) 61.905%, rgb(255, 184, 31) 61.905%, rgb(255, 184, 31) 66.667%, rgb(255, 196, 33) 66.667%, rgb(255, 196, 33) 71.429%, rgb(255, 209, 35) 71.429%, rgb(255, 209, 35) 76.19%, rgb(255, 221, 37) 76.19%, rgb(255, 221, 37) 80.952%, rgb(255, 234, 40) 80.952%, rgb(255, 234, 40) 85.714%, rgb(255, 247, 42) 85.714%, rgb(255, 247, 42) 90.476%, rgb(255, 255, 44) 90.476%, rgb(255, 255, 44) 95.238%, rgb(255, 255, 47) 95.238%, rgb(255, 255, 47) 100%);
   display: flex;
 }
 body > section {
@@ -60,26 +58,27 @@ body > section:nth-of-type(2) > section > div > p {
 }
 
 #controlPanel {
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35));
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 40px;
 }
 #controlPanel > div {
   width: 100%;
+  padding-inline: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.212);
 }
 #controlPanel > div:nth-of-type(1) {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  padding-inline: 50px;
 }
 #controlPanel > div:nth-of-type(1) > h1 {
-  color: black;
+  color: #bdbdbd;
   text-transform: capitalize;
   font-style: 20px;
   font-weight: 500;
@@ -121,13 +120,13 @@ body > section:nth-of-type(2) > section > div > p {
 #controlPanel > div:nth-of-type(2), #controlPanel > div:nth-of-type(3) {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  padding-inline: 50px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  position: relative;
 }
 #controlPanel > div:nth-of-type(2) > h1, #controlPanel > div:nth-of-type(3) > h1 {
-  color: black;
+  color: #bdbdbd;
   text-transform: capitalize;
   font-style: 20px;
   font-weight: 500;
@@ -136,13 +135,19 @@ body > section:nth-of-type(2) > section > div > p {
   height: 100px;
 }
 #controlPanel > div:nth-of-type(2) > span, #controlPanel > div:nth-of-type(3) > span {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: #169EB6;
+  width: 40px;
+  height: 40px;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
   border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 #box {
@@ -157,7 +162,9 @@ body > section:nth-of-type(2) > section > div > p {
 #codeBox {
   margin-top: 100px;
   width: 60%;
-  background-color: #272822;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
   border-radius: 6px;
 }
 #codeBox > div {
@@ -172,13 +179,15 @@ body > section:nth-of-type(2) > section > div > p {
 }
 #codeBox > div > p {
   padding-left: 20px;
-  color: #169EB6;
+  color: #ffffff;
 }
 
 #codeCopy {
   width: 130px;
   height: 60px;
-  background-color: #169EB6;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
   border-radius: 12px;
   cursor: pointer;
   display: flex;
@@ -191,16 +200,15 @@ body > section:nth-of-type(2) > section > div > p {
   transition: 0.4s ease-in-out;
 }
 #codeCopy:hover {
-  color: #169EB6;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.637);
 }
 
 footer {
   width: 100%;
   height: 50px;
-  -webkit-backdrop-filter: blur(9.6px);
-          backdrop-filter: blur(9.6px);
-  background-image: linear-gradient(45deg, rgba(32, 152, 255, 0.55), rgba(32, 152, 255, 0.55));
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -209,6 +217,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
+  border-left: 1px solid rgba(255, 255, 255, 0.274);
 }
 
 #team-btn {
@@ -221,9 +230,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(9.6px);
-          backdrop-filter: blur(9.6px);
-  background-image: linear-gradient(45deg, rgba(32, 152, 255, 0.55), rgba(32, 152, 255, 0.55));
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }
 #team-btn > img {
@@ -236,9 +245,9 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-backdrop-filter: blur(22.8px);
-          backdrop-filter: blur(22.8px);
-  background-image: linear-gradient(45deg, rgba(66, 60, 90, 0.75), rgba(66, 60, 90, 0.75));
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,9 +265,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(9.6px);
-          backdrop-filter: blur(9.6px);
-  background-image: linear-gradient(45deg, rgba(32, 152, 255, 0.55), rgba(32, 152, 255, 0.55));
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(173, 173, 173, 0.35);
   cursor: pointer;
 }
 #team > span > img {
@@ -336,8 +345,10 @@ input[type=range]:focus {
 /******** Chrome, Safari, Opera and Edge Chromium styles ********/
 /* slider track */
 input[type=range]::-webkit-slider-runnable-track {
-  background-color: white;
-  border-radius: 0px;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
   height: 12px;
 }
 
@@ -348,14 +359,14 @@ input[type=range]::-webkit-slider-thumb {
   appearance: none;
   margin-top: -6.5px;
   /* Centers thumb on the track */
-  background-color: #169EB6;
+  background-color: chocolate;
   border-radius: 50%;
   height: 25px;
   width: 25px;
 }
 
 input[type=range]:focus::-webkit-slider-thumb {
-  outline: 3px solid #169EB6;
+  outline: 3px solid chocolate;
   outline-offset: 0.125rem;
 }
 
@@ -378,12 +389,12 @@ input[type=range]::-moz-range-thumb {
 }
 
 input[type=range]:focus::-moz-range-thumb {
-  outline: 3px solid #169EB6;
+  outline: 3px solid chocolate;
   outline-offset: 0.125rem;
 }
 
 .border {
   border: 2px solid rgb(16, 12, 39);
-  outline: 1px solid aqua;
+  outline: 1px solid rgb(255, 148, 71);
   transform: scale(1.2);
 }/*# sourceMappingURL=master.css.map */
