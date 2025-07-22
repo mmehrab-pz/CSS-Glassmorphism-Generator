@@ -33,19 +33,19 @@ body {
                 top: 0;
                 left: 0;
                 backdrop-filter: blur(50px);
-                background-color: rgba(173, 173, 173, 0.35);
+                background-color: rgba(0, 0, 0, 0.425);
                 z-index: 10;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 display: none;
-
+                border-left: 1px solid rgba(255, 255, 255, 0.158);
 
                 >div {
                     width: 400px;
                     height: 300px;
                     backdrop-filter: blur(50px);
-                    background-color: rgba(173, 173, 173, 0.35);
+                    background-color: rgba(0, 0, 0, 0.35);
                     border-radius: 20px;
                     display: flex;
                     justify-content: center;
